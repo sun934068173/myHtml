@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐</title>
+    <style>
+        #gif{
+            background: url("img/1.gif");
+            width: 862px;
+            height: 865px;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <audio id="music" src="video/music.MP3" preload="auto" autoplay="autoplay" loop="loop"></audio>
+    <div id="gif" onclick="gif()"></div>
+</body>
+<script>
+    var play = document.getElementById("music");
+    var gf = document.getElementById("gif");
+    function gif() {
+        if(play.paused){
+            play.play();
+            gf.style.background = "url('img/1.gif')";
+        }else {
+            play.pause();
+            gf.style.background = "url('img/1_1.jpg')";
+        }
+
+    }
+</script>
+</html>

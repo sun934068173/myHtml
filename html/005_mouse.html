@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标事件</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+            background: aliceblue;
+            font-size: 48px;
+            text-align: center;
+            padding-top: 48px;
+        }
+    </style>
+</head>
+<body>
+    <div id="abc" onclick="abc()"></div>
+</body>
+<script>
+    var num = 169;
+
+    function abc() {
+        var av = document.getElementById("abc");
+        av.innerHTML = num;
+        if(num%7 == 0){
+            av.innerHTML = "过";
+        }else if (num%10 == 7){
+            av.innerHTML = num + "过";
+        }else if (Math.floor(num/10)%10 == 7){
+            av.innerHTML = num + "过";
+        }else {
+            av.innerHTML = num;
+        }
+        num += 1
+    }
+</script>
+</html>

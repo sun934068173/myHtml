@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+<!--    <link rel="stylesheet" type="text/css" href="css/page.css"/>-->
+    <script>
+        function aa() {
+            //isNaN是否是数字
+            //变量%2 == 0是奇数
+            //function isInteger(obj) {return obj%1 === 0} 整数的判断  单词：isInteger整数校验
+            //document.write 输出到页面
+
+            function isInteger(obj) {
+                return obj%1 === 0
+            }
+
+            var price = 8;
+            var count;
+
+            count = prompt("你要多少杯？");
+
+            if(isNaN(count)){
+                document.write("这根本不是数字");
+            }else {
+                if(isInteger(count)){
+                    if(count%2 == 0){
+                        tatalPrice = price*count*0.75
+                    }else{
+                        tatalPrice = price*count*0.75+2.5
+                    }
+                }else {
+                    document.write("请输入整数")
+                }
+            }
+            document.write("你总共消费" + tatalPrice + "元")
+        }
+        aa();
+    </script>
+</head>
+<body>
+<!--    <page id="c">春</page>-->
+<!--    <page id="x">夏</page>-->
+<!--    <page id="q">秋</page>-->
+<!--    <page id="d">冬</page>-->
+</body>
+</html>
