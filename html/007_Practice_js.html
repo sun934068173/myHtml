@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐</title>
+    <style>
+        div{
+            width: 862px;
+            height: 865px;
+            background: azure;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <ul id="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</body>
+<script>
+    var ary = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+    for(var i = 0; i < ary.length; i++){
+
+        if(ary % 2 === 0){
+            console.log(ary[i]);
+        }
+    }
+
+    var k = 0;
+    for (;k < 5;) {
+        console.log('abc' + k);
+        k++;
+    }
+    console.log('wos' + k);
+
+    var avr = [11, 22, 33, 44, 55, 66, 77, 88, 99, 100, 111, 122];
+
+    for(var i = avr.length-1; i >= 0; i--){
+        console.log(avr[i]);
+        document.write(avr[i] + '<br/>'  );
+
+        if( avr%2 === 0){
+            console.log(avr[i]);
+        }
+    }
+
+    function Person() {
+        this.name = "KXY";
+    }
+    Person.prototype = {
+        constructor: Person,
+        job: "student",
+    };
+
+    var kxy = new Person();
+    Object.defineProperty(kxy, "sex", {
+        value: "female",
+        enumerable: false
+    });
+
+    var listCont = document.getElementById("box");
+    var liList = listCont.getElementsByTagName('li');
+
+    liList[0].style.background = "#ddd"
+</script>
+</html>
+
